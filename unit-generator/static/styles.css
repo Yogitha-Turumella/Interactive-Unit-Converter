@@ -1,0 +1,145 @@
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f2f2f2; /* Professional light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Centered Container for Converter */
+.container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Header Styling */
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+}
+
+select,
+input[type="text"],
+input[type="number"] {
+    width: 100%; /* Make all input and select elements the same width */
+    padding: 0.75rem;
+    margin-bottom: 1.25rem;
+    border: 2px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Ensure padding does not affect width */
+    -webkit-appearance: none; /* Remove default styles on WebKit browsers */
+    -moz-appearance: none; /* Remove default styles on Mozilla browsers */
+    appearance: none; /* Remove default styles on modern browsers */
+}
+
+select:focus,
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #74ebd5; /* Slight color change on focus */
+    background-color: #fff;
+}
+
+/* Button Styling */
+button {
+    background-color: #74ebd5;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #9face6;
+    transform: scale(1.05);
+}
+
+/* Converted Value Display */
+#convertedValue {
+    font-size: 1.5rem;
+    color: #4b4b4b;
+    margin-top: 20px;
+    animation: fadeIn 0.6s ease;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        padding: 0.65rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    button {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    #convertedValue {
+        font-size: 1.2rem;
+    }
+}

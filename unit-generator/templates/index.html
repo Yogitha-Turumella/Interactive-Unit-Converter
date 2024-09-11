@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Unit Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Interactive Unit Converter</h2>
+        <form id="converterForm">
+            <div class="input-group">
+                <label for="conversionType">Select Conversion Type:</label>
+                <select id="conversionType">
+                    <option value="length">Length</option>
+                    <option value="temperature">Temperature</option>
+                    <option value="weight">Weight</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="valueInput">Value:</label>
+                <input type="text" id="valueInput" placeholder="Enter value here">
+            </div>
+            <div class="input-group">
+                <label for="fromUnit">From:</label>
+                <select id="fromUnit">
+                    <!-- Options will be filled dynamically -->
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="toUnit">To:</label>
+                <select id="toUnit">
+                    <!-- Options will be filled dynamically -->
+                </select>
+            </div>
+            <button type="button" id="convertButton">Convert</button>
+        </form>
+        <div id="convertedValue" class="output">Converted Value: <span id="result"></span></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
