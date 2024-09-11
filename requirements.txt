@@ -1,0 +1,2 @@
+Flask==2.2.5  # Flask web framework
+gunicorn==20.1.0  # Production server to run Flask applications
